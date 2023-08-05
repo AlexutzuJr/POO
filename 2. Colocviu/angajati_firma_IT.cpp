@@ -1,31 +1,33 @@
 #include <iostream>
 #include <string>
 
-class Angajat
+class Angajat //clasa de baza
 {
-    protected:
+    protected: //date membre
         std::string nume; //"#" este pentru protected (vezi curs 3, pag 14)
         float salariu_baza;
         std::string functie;
         float procent_taxe_salariu;
         
-    public:
+    public: //constructor cu lista de initializare
         Angajat(std::string nume, float salariu_baza, std::string functie, float procent_taxe_salariu): nume(nume), salariu_baza(salariu_baza), functie(functie), procent_taxe_salariu(procent_taxe_salariu) {}
-        
+
+    //setters, getters si functii
     virtual float get_salariu_net(float x) { return 0; } //"+" corespunde functiilor membre; fata de exemplul din laboratoare, nu uitam sa punem "virtual" in fata (fiind in clasa de baza), "x" dupa "float" in paranteza, si bineinteles "return 0" la final
     virtual float get_salariu_brut() { return 0; } 
     virtual std::string get_nume() { return nume; } //la "string" returnam numele variabilei
-    virtual void marire_salariu(float x) {} //deoarece e functie void, nu returneaza nimic (oricum primeam eroare); aici avem nevoie de acel float "x", pentru a ne putea folosi de acele valori abia citite (prestabilite)
+    virtual void marire_salariu(float x) {} //deoarece e functie "void", nu returneaza nimic; aici avem nevoie de acel "float x", pentru a ne putea folosi de acele valori abia citite (prestabilite)
     
     virtual void afisare() {}
     virtual void calcul_salarii() {}
     
     std::string get_functie(){ return this->functie; }
-    
+
     virtual ~Angajat(){ std::cout<<"Destructor Angajat"<<std::endl; } //destructor
 };
 
-class Analist: public Angajat
+
+class Analist: public Angajat //clasa derivata 1 din baza
 {
     public:
         Analist(std::string nume, float salariu_baza, std::string functie, float procent_taxe_salariu): Angajat(nume, salariu_baza, functie, procent_taxe_salariu) {}
@@ -36,12 +38,12 @@ class Analist: public Angajat
         std::cout<<functie<<std::endl;
     }
     
-    void calcul_salarii() //atentie mare, sa numim la fel functiile ca altfel s-a dus pe pl tot
+    void calcul_salarii() //atentie mare, sa numim la fel functiile din clasele derivate
     {
         int salariu_brut;
         int salariu_net;
         
-        salariu_brut=salariu_baza; //pe baza formulei generale data in cerinta, inlocuim evident cu ce variabile avem, in functie de clasa in care scriem functia; de asemenea, deoarece valoarea de la "input" este aceeasi cu cea de la "output", evident ca nu mai trebuie sa adunam cu nimic, aici
+        salariu_brut=salariu_baza; //pe baza formulei generale data in cerinta, inlocuim (evident) cu ce variabile avem, in functie de clasa in care scriem functia; de asemenea, deoarece valoarea de la "input" este aceeasi cu cea de la "output", nu mai trebuie sa adunam cu nimic, aici
         salariu_net=salariu_baza*(100-40)/100; //inlocuim variabila "procent_taxe_salariu" cu "40" pentru ca asa ni se specifica in cerinta
         
         std::cout<<nume<<std::endl; //pentru chestiile astea ne uitam la ce este afisat la "output", deoarece in cerinta (nu stiu de ce), nu ni se spune explicit ca asta ar trebui sa se afiseze
@@ -62,11 +64,11 @@ class Analist: public Angajat
         std::cout<<"Salariu de baza nou: "<<salariu_nou<<std::endl;
     }
     
-    ~Analist(){ std::cout<<"Destructor Analist"<<std::endl; }
+    ~Analist(){ std::cout<<"Destructor Analist"<<std::endl; } //destructor
 };
 
-//Clasa derivata 2 din clasa derivata 1
-class Programator: public Analist
+
+class Programator: public Analist //clasa derivata 2 din clasa derivata 1
 {
     protected:
         float procent_deducere_salariu_it;
@@ -106,10 +108,11 @@ class Programator: public Analist
         std::cout<<"Salariu de baza nou: "<<salariu_nou<<std::endl;
     }
     
-    ~Programator(){ std::cout<<"Destructor Programator"<<std::endl; }
+    ~Programator(){ std::cout<<"Destructor Programator"<<std::endl; } //destructor
 };
 
-class LiderEchipaProgramare: public Programator
+
+class LiderEchipaProgramare: public Programator //clasa derivata 3 din derivata 2
 {
     protected:
         float bonus_vechime_functie;
@@ -150,11 +153,12 @@ class LiderEchipaProgramare: public Programator
         std::cout<<"Salariu de baza nou: "<<salariu_nou<<std::endl;
     }
     
-    ~LiderEchipaProgramare(){ std::cout<<"Destructor LiderEchipaProgramare"<<std::endl; }
+    ~LiderEchipaProgramare(){ std::cout<<"Destructor LiderEchipaProgramare"<<std::endl; } //destructor
 };
 
+
 class FirmaProgramare
-{//clasa asta nu face nimic, dar ne cere s-o scriem
+{ //clasa asta nu face nimic, dar ne cere s-o scriem
     private:
         Angajat **angajati; //curs 2, pag 40 (doar ca in loc de int *note avem Note **note)
         int nr_angajati;
@@ -164,7 +168,7 @@ class FirmaProgramare
         {
             this->nr_angajati=nr_angajati;
             this->angajati=new Angajat*[nr_angajati]; //in loc de new int[nr_note], vom avea new Note*[nr_note] (pentru ca avem dublu pointer, nu pointer simplu)
-        //practic int-ul tine locul lui Angajat*, iar restul ramane neschimbat (ex: int[nr_angajati]<=>Angajat*[nr_angajati] sau int* angajati<=>Angajat** angajati) 
+            //practic "int-ul" tine locul lui "Angajat*", iar restul ramane neschimbat (ex: int[nr_angajati]<=>Angajat*[nr_angajati] sau int* angajati<=>Angajat** angajati) 
             for(int i=0;i<nr_angajati;i++)
                 *(this->angajati+i)=*(angajati+i);
         }
@@ -175,60 +179,64 @@ class FirmaProgramare
 };
 
 
-int main()
+
+int main() //functia main
 {
+    //initializam date
     int nr_angajati;
     std::string nume;
-    std::string functie; //adica "rolul", oricum putem denumi si altfel variabilele in main (doar sa nu facem confuzie), dar in principiu ar trebui sa fie aceleasi ca din clasa Angajat
+    std::string functie; //adica "rolul", oricum putem denumi si altfel variabilele in "main" (doar sa nu facem confuzie)
     float salariu_baza;
     
     std::cin>>nr_angajati;
+
     
-    Angajat **angajat_array=nullptr;
-    angajat_array=new Angajat*[nr_angajati];
-    
-    int k=0;
-    
+    Angajat **angajat_array=nullptr; //facem array de obiecte (toate pot sa fie de o clasa diferita)
+    angajat_array=new Angajat*[nr_angajati]; //folosim alocare dinamica
+
+    int k=0;  //variabila de lucru care pune pe pozitii
+
     for(int i=0;i<nr_angajati;i++)
-    {
-        std::cin.ignore();
+    { //generam fiecare obiect
+        std::cin.ignore(); //aici il punem in "for" si nu inafara acestuia, pentru ca mai avem niste "if-uri" care se executa in aceeasi bucla
         getline(std::cin, nume);
         std::cin>>functie;
         std::cin>>salariu_baza;
         
-        if(functie=="Analist") //cautam functiile care apar la "input"; stim ca if-ul e in functie de "functie", uitandu-ne la "input", la a cata variabila e citita acolo
-            *(angajat_array+(k++))=new Analist(nume, salariu_baza, functie, 0); //punem 0 unde nu este citita in main, functia din clasa de baza
+        if(functie=="Analist") //cautam functiile care apar la "input"; stim ca "if-ul" e in functie de "functie", uitandu-ne la "input", la a cata variabila e citita acolo
+            *(angajat_array+(k++))=new Analist(nume, salariu_baza, functie, 0); //punem 0 unde nu este citita in "main", functia din clasa de baza
             
         if(functie=="Programator")
-            *(angajat_array+(k++))=new Programator(nume, salariu_baza, functie, 0, 0);
+            *(angajat_array+(k++))=new Programator(nume, salariu_baza, functie, 0, 0); //punem elementele in obiect
             
         if(functie=="LiderEchipaProgramare")
         {
             int vechime_functie;
             std::cin>>vechime_functie;
             
-            *(angajat_array+(k++))=new LiderEchipaProgramare(nume, salariu_baza, functie, 0, 0, 0, vechime_functie); //punem 0 unde nu am citit respectivele variabile, si tinem cont de pozitia variabilelor citite, din clasa respectiva (fiind o matrice/vector)
+            *(angajat_array+(k++))=new LiderEchipaProgramare(nume, salariu_baza, functie, 0, 0, 0, vechime_functie); //punem 0 unde nu am citit variabilele respective, si tinem cont de pozitia variabilelor citite, din clasa respectiva (fiind o matrice/vector)
         }
     }
     
     int optiune;
     std::cin>>optiune;
+
     
     if(optiune==1)
     {
         for(int i=0;i<nr_angajati;i++)
-        (*(angajat_array+i))->afisare();
+            (*(angajat_array+i))->afisare();
     }
     
     if(optiune==2)
     {
         for(int i=0;i<nr_angajati;i++)
-        (*(angajat_array+i))->calcul_salarii(); //nu e in functie de ceva pentru ca nu am citit nimic de la tastatura in aceasta "optiune" 
+            (*(angajat_array+i))->calcul_salarii(); //nu e in functie de ceva pentru ca nu am citit nimic de la tastatura in aceasta "optiune" 
     }
     
     if(optiune==3)
     {
-        std::string functie_analist; //acolo zice "functie_in_firma", deci trebuie sa deducem noi ca pentru fiecare functie trebuie sa scriem cate un string; aici e folosit pe post de "getter"
+        std::string functie_analist; //acolo zice "functie_in_firma", deci trebuie sa deducem noi ca pentru fiecare functie trebuie sa scriem cate un "string"; aici e folosit pe post de getter
         std::string functie_programator; //de asemenea putem vedea ca sunt mai multe, si din "input"
         std::string functie_lider;
         
@@ -246,12 +254,12 @@ int main()
         std::cin>>procent_lider;
         
         for(int i=0;i<nr_angajati;i++)
-        {
-            if((*(angajat_array+i))->get_functie()==functie_analist) //pentru a putea apela "functie" avem nevoie de getter, pentru ca e "protected"; nu degeaba am citit acel "functie_analist" in aceasta optiune, asadar d-aia nu am scris "if(functie=="Programator")", ca inainte (plus ca acum apare ceva gen "Programator 10", pe langa acel "Programator" deja citit)
+        { //fiecare functie are procent diferit 
+            if((*(angajat_array+i))->get_functie()==functie_analist) //pentru a putea apela "functie" avem nevoie de getter, pentru ca e "protected" (nu degeaba ne-a pus sa citim acel "functie_analist" pentru optiunea asta), asadar d-aia nu am scris "if(functie=="Programator")", ca inainte (plus ca acum apare ceva gen "Programator 10", pe langa acel "Programator" deja citit)
                 (*(angajat_array+i))->marire_salariu(procent_analist); //functia_creata(functia_citita)
                 
             if((*(angajat_array+i))->get_functie()==functie_programator) //trebuie sa iteram prin matrice, de aceea nu putem scrie, de exemplu, ca la inceput "if(functie=="Programator")"  
-                (*(angajat_array+i))->marire_salariu(procent_programator); //argumentul functiei "marire_salariu" e mai mult doar ca sa stie pentru cine sa calculeze salariul
+                (*(angajat_array+i))->marire_salariu(procent_programator); //argumentul functiei "marire_salariu" e ca sa stie pentru cine sa calculeze salariul
                 
             if((*(angajat_array+i))->get_functie()==functie_lider)
                 (*(angajat_array+i))->marire_salariu(procent_lider);
@@ -267,15 +275,15 @@ int main()
         getline(std::cin, nume_a);
         std::cin>>functie_a;
         
-        int c; //folosit pe post de contor
+        int c; //folosit pe post de contor pentru a cauta persoana promovata
         
         for(int i=0;i<nr_angajati;i++)
             if((*(angajat_array+i))->get_nume()==nume_a) //selectam doar ce e nume, pentru ca la afisare din acea matrice, apare doar numele 
                 c=i; //iteram prin matrice
                 
-        delete (*(angajat_array+c)); //prin asta setam noua functia si apelam destructorul        
+        delete (*(angajat_array+c)); //prin asta, setam noua functia si apelam destructorul        
         
-        //facem obiect de functia noua, in locul celui sters
+        //facem obiect de noua functie promovata, in locul celui sters
         if(functie_a=="Analist")
             *(angajat_array+(c))=new Analist(nume_a, 0, functie_a, 0); //punem elementele in obiect
             
@@ -284,7 +292,8 @@ int main()
             
         if(functie_a=="LiderEchipaProgramare")
             *(angajat_array+(c))=new LiderEchipaProgramare(nume_a, 0, functie_a, 0, 0, 0, 0);
-            
+
+        //afisam angajatii
         for(int i=0;i<nr_angajati;i++)
             (*(angajat_array+i))->afisare();
     }

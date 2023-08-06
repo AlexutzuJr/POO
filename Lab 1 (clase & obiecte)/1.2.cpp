@@ -1,3 +1,10 @@
+/* Scrieți o clasă Cutie cu 3 date membre publice: lungime, lățime, înălțime, de tip real și o funcție membră care întoarce volumul cutiei.
+Definiți o funcție membră care calculează volumul rămas în cutia inițială dacă în ea se va introduce o altă cutie transmisă ca argument în funcție. Se va verifica, mai întâi, dacă cea de-a doua cutie poate fi introdusă 
+în prima cutie (considerăm că cele 3 dimensiuni respectă aceeași ordine și nu putem roti nicio cutie). În caz contrar, se va afișa volumul cutiei inițiale.
+În programul principal se va instanția un obiect de tipul Cutie, se vor citi de la tastatură cele 3 atribute și se va citi o comandă, în funcție de valoarea căreia se vor executa diferite acțiuni:
+1. Se afișează pe ecran volumul cutiei.
+2. Se instanțiază o a doua cutie, se citesc de la tastatură cele 3 atribute și se afișează pe ecran volumul rămas liber în prima cutie după introducerea celei de-a doua cutii (dacă este posibil). */ 
+
 #include <iostream>
 #include <string>
 
@@ -116,8 +123,5 @@ int main(){
         
     }
 
-    
-    
-    
     
 }

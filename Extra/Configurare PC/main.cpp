@@ -55,13 +55,10 @@ class Placa_de_baza : protected Echipament_electronic
 {
   
 protected:
-
     std::string socket;
 
 public:
-
-    Placa_de_baza(float pret = 0.0f, std::string nume = "", std::string tip = "", std::string socket = "")
-    :Echipament_electronic(pret, nume, tip), socket(socket){}
+    Placa_de_baza(float pret = 0.0f, std::string nume = "", std::string tip = "", std::string socket = ""): Echipament_electronic(pret, nume, tip), socket(socket){}
   
     void afisare(){std::cout<<tip<<", "<<nume<<", "<<socket<<", "<<pret<<'\n';}
     
@@ -70,20 +67,19 @@ public:
     std::string get_nume(){return nume;}
     float get_pret(){return pret;}
     std::string get_socket(){return socket;}
+
 };
+
 
 class CPU : protected Echipament_electronic
 {
   
 protected:
-
     std::string socket;
     int frecventa; // Ghz
 
 public:
-
-    CPU(float pret = 0.0f, std::string nume = "", std::string tip = "", std::string socket = "", int frecventa = 0)
-    :Echipament_electronic(pret, nume, tip), socket(socket), frecventa(frecventa){}
+    CPU(float pret = 0.0f, std::string nume = "", std::string tip = "", std::string socket = "", int frecventa = 0): Echipament_electronic(pret, nume, tip), socket(socket), frecventa(frecventa){}
   
     void afisare(){std::cout<<tip<<", "<<nume<<", "<<socket<<", "<<frecventa<<", "<<pret<<'\n';}
     
@@ -95,17 +91,15 @@ public:
     
 };
 
+
 class GPU : protected Echipament_electronic
 {
     
 protected:
-
     int memorie; // in GB
 
 public:
-    
-    GPU(float pret = 0.0f, std::string nume = "", std::string tip = "", int memorie = 0)
-    :Echipament_electronic(pret, nume, tip), memorie(memorie){}
+    GPU(float pret = 0.0f, std::string nume = "", std::string tip = "", int memorie = 0): Echipament_electronic(pret, nume, tip), memorie(memorie){}
     
     void afisare(){std::cout<<tip<<", "<<nume<<", "<<memorie<<", "<<pret<<'\n';}
     
@@ -113,19 +107,18 @@ public:
     
     std::string get_nume(){return nume;}
     float get_pret(){return pret;}
+
 };
+
 
 class Stocare : protected Echipament_electronic
 {
     
 protected:
-
     float memorie;
 
 public:
-
-    Stocare(float pret = 0.0f, std::string nume = "", std::string tip = "", float memorie = 0.0f)
-    :Echipament_electronic(pret, nume, tip), memorie(memorie){}
+    Stocare(float pret = 0.0f, std::string nume = "", std::string tip = "", float memorie = 0.0f): Echipament_electronic(pret, nume, tip), memorie(memorie){}
 
     void afisare(){std::cout<<tip<<", "<<nume<<", "<<memorie<<", "<<pret<<'\n';}
     
@@ -133,11 +126,12 @@ public:
     
     std::string get_nume(){return nume;}
     float get_pret(){return pret;}
+
 };
+
 
 class Manager
 {
-    
     Placa_de_baza** V1;
     int index_v1;
     
@@ -151,7 +145,6 @@ class Manager
     int index_v4;
     
 public:
-
     Manager()
     {
         index_v1 = 0;
@@ -385,36 +378,37 @@ public:
     }
 };
 
+
+
 int main(){
 
-    Manager vlad;
+    Manager Alex;
     
     int comanda;
     
     while(true)
     {
         std::cin>>comanda;    
-        if(comanda  == 1) vlad.citire_date();
+        if(comanda  == 1) Alex.citire_date();
         
-        if(comanda == 2) vlad.afisare_componente();
+        if(comanda == 2) Alex.afisare_componente();
         
         if(comanda == 3)
         {
             std::string cpu, gpu, stocare;
             std::cin>>cpu>>gpu>>stocare;
             
-            vlad.configuratie_PC(cpu, gpu, stocare);
+            Alex.configuratie_PC(cpu, gpu, stocare);
         }
         
         if(comanda == 4)
         {
-            vlad.sort_raport_calitate_pret();
-            //vlad.afisare_componente();
+            Alex.sort_raport_calitate_pret();
             
             int buget;
             std::cin>>buget;
             
-            vlad.configuratie_optima_PC(buget);
+            Alex.configuratie_optima_PC(buget);
         }
         
         if(comanda == 5) break;

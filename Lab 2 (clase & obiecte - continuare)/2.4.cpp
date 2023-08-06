@@ -3,10 +3,10 @@ std::string: sender, recipient, subject și body. Se vor citi de la tastatură, 
 -un șir de caractere reprezentând adresa de email proprie;
 -un întreg reprezentând capacitatea maximă de stocare;
 -un întreg reprezentând numărul de mesaje primite. Pentru fiecare mesaj primit se citesc următoarele date:
--adresa de email a expeditorului;
--adresa de email a destinatarului;
--subiectul mesajului;
--corpul mesajului;
+   -adresa de email a expeditorului;
+   -adresa de email a destinatarului;
+   -subiectul mesajului;
+   -corpul mesajului;
 -un întreg reprezentând o comandă, în funcție de care se vor executa diferite funcționalități:
 1. check_inbox - se afișează toate mesajele destinate adresei reținute în obiectul Mail_box, în ordinea în care au fost introduse de la tastatură. Afișarea unui mesaj presupune afișarea următoarelor informații pe ecran, pe 
 linii separate:

@@ -1,7 +1,10 @@
 /* Să se scrie un program care ordonează o secvență de maxim 20 de numere complexe.
-Se va citi de la tastatură un număr întreg reprezentând numărul de numere complexe ce urmează a fi citit. Ulterior, de pe fiecare linie se citesc 2 valori reale, reprezentând partea reală, respectiv partea imaginară, separate
-de un spațiu.
+
+Se va citi de la tastatură un număr întreg reprezentând numărul de numere complexe ce urmează a fi citit. Ulterior, de pe fiecare linie se citesc 2 valori reale, reprezentând partea reală, respectiv partea imaginară, 
+separate de un spațiu.
+
 Să se afișeze pe ecran numerele complexe ordonate, câte unul pe linie. Afișarea unui număr complex se face sub forma "<partea_reala> <partea_imaginara>". */
+
 
 #include <iostream>
 #include <limits>

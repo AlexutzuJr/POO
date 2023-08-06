@@ -1,3 +1,26 @@
+/* Să se implementeze codul aferent claselor ale căror date membre urmăresc diagrama UML de mai jos. Nu se va folosi mecanismul funcțiilor/claselor friend.
+
+Entity:
+# name: std::string
+
+Person (public to Entity):
+# age: int
+
+Student (public to Person):
+- serie: char
+
+Clasele se vor completa cu funcționalitățile necesare astfel încât codul dat în funcția main să întoarcă următoarea secvență de mesaje:
+Ctor Entity
+Ctor Entity
+Ctor Person
+Ctor Entity
+Ctor Person
+Ctor Student
+
+Entity name: Entity 1
+Entity name: Person 1
+Entity name: Student 1 */
+
 #include <iostream>
 #include <string>
 #include <limits>
@@ -102,4 +125,3 @@ int main(){
 
     return 0;
 }
-

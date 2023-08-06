@@ -1,12 +1,11 @@
 /* Pornind de la o clasă de bază Poligon, se vor crea două derivate: Triunghi și Paralelogram. De asemenea, se cunoaște că există funcția virtual float Poligon::aria()=0;
-Se citește de la tastatură o valoare întreagă reprezentând numărul de Triunghiuri și numărul de Paralelograme ale căror laturi urmează a fi citite. Să se afișeze pe ecran Poligoanele, în ordinea ariei lor, câte un Poligon pe 
-rând. Afișarea unui Poligon coincide cu afișarea valorilor laturilor sale, în aceeași ordine în care au fost citite, separate de un spațiu liber. */
+Se citește de la tastatură o valoare întreagă reprezentând numărul de Triunghiuri și numărul de Paralelograme ale căror laturi urmează a fi citite. Să se afișeze pe ecran Poligoanele, în ordinea ariei lor, câte un 
+Poligon pe rând. Afișarea unui Poligon coincide cu afișarea valorilor laturilor sale, în aceeași ordine în care au fost citite, separate de un spațiu liber. */
+
 
 #include<iostream>
 #include<vector>
 #include<algorithm>
-
-
 
 class Poligon{
 

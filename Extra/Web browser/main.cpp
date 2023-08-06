@@ -1,5 +1,5 @@
-/* Să se scrie o aplicație de tip web browser pentru gestiunea funcționalității de navigare între diferite pagini web. În acest sens, se vor "genera" mai multe pagini web și se va implementa un browser care va putea accesa 
-o pagină prin intermediul URL-ului și a butoanelor back/forward. 
+/* Să se scrie o aplicație de tip web browser pentru gestiunea funcționalității de navigare între diferite pagini web. În acest sens, se vor "genera" mai multe pagini web și se va implementa un browser care va putea 
+accesa o pagină prin intermediul URL-ului și a butoanelor back/forward. 
 
 O pagină web este caracterizată de câmpurile:
 - url

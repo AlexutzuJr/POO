@@ -1,6 +1,7 @@
 /* Se va crea o clasă Segment, care este definită în spațiu de o pereche de puncte în coordonate carteziene în plan tridimensional. Punctele sunt create ca instanțe ale clasei Punct. Să se definească un constructor cu 
-6 argumente pentru clasa Segment și o funcție care să calculeze lungimea segmentului. În programul principal se va instanția un obiect de tipul Segment, prin citirea de la tastatură a celor 6 atribute, în ordinea x1, y1, z1, 
-x2, y2, z2 și se va afișa pe ecran lungimea segmentului, cu 2 zecimale. */
+6 argumente pentru clasa Segment și o funcție care să calculeze lungimea segmentului. În programul principal se va instanția un obiect de tipul Segment, prin citirea de la tastatură a celor 6 atribute, în ordinea x1, y1,
+z1, x2, y2, z2 și se va afișa pe ecran lungimea segmentului, cu 2 zecimale. */
+
 
 #include <iostream>
 #include <math.h>

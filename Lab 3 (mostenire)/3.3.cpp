@@ -1,24 +1,24 @@
 /* Să se implementeze următoarea secvență UML:
 
 Persoana:
-#nume std::string
+# nume std::string
 
-Student (public to Persoana): 
--serie: char
--nota: int
-+display(void): void
+Student (public către Persoana): 
+- serie: char
+- nota: int
++ display(void): void
 
 Serie:
--serie: char
--p_studenti: Student**
--nr_studenti: int
-
-+display(void): void
+- serie: char
+- p_studenti: Student**
+- nr_studenti: int
++ display(void): void
 + nota_max(void): int
 + nota_medie(void): float
 
-În urma rulării codului din funcția main() se vor afișa pe ecran nota maximă a studenților seriei selectate, respectiv media notelor lor. Constructorul clasei Serie are rolul de a prelua din vectorul de intrare și a 
-reține doar studenții care aparțin seriei selectate ('A'). */
+În urma rulării codului din funcția main() se vor afișa pe ecran nota maximă a studenților seriei selectate, respectiv media notelor lor. Constructorul clasei Serie are rolul de a prelua din vectorul de intrare și a reține doar studenții care aparțin seriei selectate 
+('A'). */
+
 
 #include <iostream>
 #include <string>

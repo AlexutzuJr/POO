@@ -3,10 +3,10 @@
 Entity:
 # name: std::string
 
-Person (public to Entity):
+Person (public către Entity):
 # age: int
 
-Student (public to Person):
+Student (public către Person):
 - serie: char
 
 Clasele se vor completa cu funcționalitățile necesare astfel încât codul dat în funcția main să întoarcă următoarea secvență de mesaje:
@@ -23,6 +23,7 @@ Person age: 34
 Student name: Student 1
 Student age: 21
 Student serie: B */
+
 
 #include <iostream>
 #include <string>
@@ -131,7 +132,7 @@ int main(){
     for (int i=0; i<3; i++){
         p_entity[i]->display();
     }
-    
+
 
     return 0;
 }

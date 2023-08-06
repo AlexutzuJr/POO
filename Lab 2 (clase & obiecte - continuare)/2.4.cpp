@@ -1,27 +1,28 @@
-/* Să se scrie o clasă Mail_box cu datele membre email și capacitate (=numărul maxim de mesaje ce pot fi stocate). Aceasta va conține și un vector de obiecte din clasa Mail. Clasa Mail conține următoarele date membre de tipul 
-std::string: sender, recipient, subject și body. Se vor citi de la tastatură, în ordine, următoarele informații:
--un șir de caractere reprezentând adresa de email proprie;
--un întreg reprezentând capacitatea maximă de stocare;
--un întreg reprezentând numărul de mesaje primite. Pentru fiecare mesaj primit se citesc următoarele date:
-   -adresa de email a expeditorului;
-   -adresa de email a destinatarului;
-   -subiectul mesajului;
-   -corpul mesajului;
--un întreg reprezentând o comandă, în funcție de care se vor executa diferite funcționalități:
-1. check_inbox - se afișează toate mesajele destinate adresei reținute în obiectul Mail_box, în ordinea în care au fost introduse de la tastatură. Afișarea unui mesaj presupune afișarea următoarelor informații pe ecran, pe 
-linii separate:
-a. Index: <index-ul din lista de mesaje>
-b. From: <sender>
-c. To: <recipient>
-d. Subject: <subject>
-e. <body>
-f. ---
+/* Să se scrie o clasă Mail_box cu datele membre email și capacitate (=numărul maxim de mesaje ce pot fi stocate). Aceasta va conține și un vector de obiecte din clasa Mail. Clasa Mail conține următoarele date membre de 
+tipul std::string: sender, recipient, subject și body. Se vor citi de la tastatură, în ordine, următoarele informații:
+- un șir de caractere reprezentând adresa de email proprie;
+- un întreg reprezentând capacitatea maximă de stocare;
+- un întreg reprezentând numărul de mesaje primite. Pentru fiecare mesaj primit se citesc următoarele date:
+   - adresa de email a expeditorului;
+   - adresa de email a destinatarului;
+   - subiectul mesajului;
+   - corpul mesajului;
+- un întreg reprezentând o comandă, în funcție de care se vor executa diferite funcționalități:
+1. check_inbox - se afișează toate mesajele destinate adresei reținute în obiectul Mail_box, în ordinea în care au fost introduse de la tastatură. Afișarea unui mesaj presupune afișarea următoarelor informații pe ecran, 
+pe linii separate:
+   a. Index: <index-ul din lista de mesaje>
+   b. From: <sender>
+   c. To: <recipient>
+   d. Subject: <subject>
+   e. <body>
+   f. ---
 2. check_outbox - se afișează toate mesajele trimise de către adresa reținută în obiectul Mail_box, în ordinea în care au fost trimise.
 3. send - se citesc datele (fără expeditor) pentru un obiect Mail care va fi trimis către destinatar. Ulterior, se afișează pe ecran mesajele trimise.
-4. reply - se citește de la tastatură un întreg reprezentând indexul mesajului din lista de mesaje din inbox căruia dorim să ii răspundem. Se citesc datele (subiectul si corpul mesajului) pentru un obiect Mail nou care va fi
-trimis ca răspuns pentru mesajul selectat. Ulterior, se afișează pe ecran mesajele trimise.
+4. reply - se citește de la tastatură un întreg reprezentând indexul mesajului din lista de mesaje din inbox căruia dorim să ii răspundem. Se citesc datele (subiectul si corpul mesajului) pentru un obiect Mail nou care 
+va fi trimis ca răspuns pentru mesajul selectat. Ulterior, se afișează pe ecran mesajele trimise.
 5. forward - se citește de la tastatură un întreg reprezentând indexul mesajului din lista de mesaje din inbox pe care dorim să îl redirecționăm. Se citește de la tastatură doar adresa de email către care facem 
 redirecționarea, corpul și subiectul mesajului fiind preluate de la mesajul din inbox. Ulterior, se afișează pe ecran mesajele trimise. */
+
 
 #include <iostream>
 #include <limits>

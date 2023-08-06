@@ -2,9 +2,9 @@
 implicite.
 
 Pentru clasa Pisica cu datele membre nume, vârstă, greutate să se scrie toți constructorii cu parametri posibili. Toate valorile numerice implicite vor fi egale cu 0, iar șirurile de caractere implicite nu vor conține 
-niciun caracter. În programul principal se vor instanția mai întâi un obiect cu niciun parametru, apoi cu un parametru, cu doi parametri, respectiv 3 parametri - parametrii vor fi transmiși în ordinea menționată anterior,
-fiecare dintre ei fiind citit de pe un rând nou. Pentru fiecare obiect menționat se vor afișa toate datele membre, în ordinea menționată, separate de un spațiu. După fiecare set de date membre aparținând unui obiect se 
-va trece pe următorul rând (caracterul newline). */
+niciun caracter. În programul principal se vor instanția mai întâi un obiect cu niciun parametru, apoi cu un parametru, cu doi parametri, respectiv 3 parametri - parametrii vor fi transmiși în ordinea menționată 
+anterior, fiecare dintre ei fiind citit de pe un rând nou. Pentru fiecare obiect menționat se vor afișa toate datele membre, în ordinea menționată, separate de un spațiu. După fiecare set de date membre aparținând unui 
+obiect se va trece pe următorul rând (caracterul newline). */
 
 
 #include <iostream>

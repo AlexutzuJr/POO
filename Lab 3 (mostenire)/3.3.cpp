@@ -16,8 +16,8 @@ Serie:
 + nota_max(void): int
 + nota_medie(void): float
 
-În urma rulării codului din funcția main() se vor afișa pe ecran nota maximă a studenților seriei selectate, respectiv media notelor lor. Constructorul clasei Serie are rolul de a prelua din vectorul de intrare și a reține doar studenții care aparțin seriei selectate 
-('A'). */
+În urma rulării codului din funcția main() se vor afișa pe ecran nota maximă a studenților seriei selectate, respectiv media notelor lor. Constructorul clasei Serie are rolul de a prelua din vectorul de intrare și a 
+reține doar studenții care aparțin seriei selectate ('A'). */
 
 
 #include <iostream>

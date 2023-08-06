@@ -1,3 +1,17 @@
+/* Să se scrie două clase distincte, Vector și Matrice care să conțină drept date membre un vector de maxim 20 de întregi, respectiv un tablou bidimensional, de dimensiune maximă 20 x 20. Se vor scrie constructorii 
+aferenți celor 2 clase și o funcție membră de afișare a elementelor (cel puțin pentru clasa Vector). Se va scrie o funcție de tip friend care să execute înmulțirea dintre un Vector și o Matrice. Funcția va verifica mai 
+întâi dacă operația poate avea loc (numărul de coloane ale vectorului să coincidă cu numărul de linii ale matricei). În caz contrar, va afișa mesajul “EROARE” pe ecran. Vectorul este considerat de tipul linie. Toate 
+inițializările din constructori vor fi făcute cu ajutorul listei de inițializare.
+Se citesc de la tastatură, de pe linii diferite, următoarele date:
+-un întreg n, reprezentând numărul de elemente ale vectorului;
+-n valori întregi, reprezentând valorile vectorului;
+-doi întregi, m și n, reprezentând numărul de linii, respectiv coloane ale matrice;
+-m x n valori întregi, reprezentând valorile matricei.
+Se va afișa pe ecran rezultatul obținut în urma înmulțirii vectorului cu matricea, respectiv "EROARE", în cazul în care înmulțirea nu poate avea loc.
+Extensie: funcția friend va întoarce în programul apelant un obiect de tipul Vector drept rezultat.
+Extensie 2: atât Vectorul, cât și Matricea, vor stoca valorile în mod dinamic.
+Extensie 3: separați declarațiile claselor și definițiile funcțiilor membre în fișiere diferite. Notă: trebuie avute în vedere declarațiile în avans (forward declaration) ale claselor și a funcției friend. */
+
 #include <iostream>
 
 

@@ -1,12 +1,13 @@
 /* Se dă codul din funcția main. De asemenea, se dă și clasa abstractă Poligon. Să se implementeze toate clasele necesare, conform diagramei UML de mai jos.
 
-Triunghi goes to Poligon
-Patrat goes to Dreptunghi which goes to Patrulater which goes to Poligon
+Triunghi către Poligon
+Patrat către Dreptunghi care merge către Patrulater care merge către Poligon
 
 Rularea programului principal trebuie să afișeze următoarele rezultate:
 2.90474 9
 9 12
 24 22 */
+
 
 #include <iostream>
 #include <cmath>

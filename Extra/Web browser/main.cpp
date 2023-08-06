@@ -46,7 +46,7 @@ respectivă există și este unică.
 
 int main()
 {
-    Browser vlad;
+    Browser Alex;
     
     std::list<Pagina_Web> P;
     int comanda;
@@ -69,14 +69,14 @@ int main()
         if(comanda == 2)
         {
             std::cin>>url;
-            vlad.link(P, url);
+            Alex.link(P, url);
         }
         
-        if(comanda == 3) vlad.afisare_pagina();
+        if(comanda == 3) Alex.afisare_pagina();
         
-        if(comanda == 4) vlad.back();
+        if(comanda == 4) Alex.back();
         
-        if(comanda == 5) vlad.forward();
+        if(comanda == 5) Alex.forward();
     
         if(comanda == 6) break;
     }

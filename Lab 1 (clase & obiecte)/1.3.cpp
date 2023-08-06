@@ -1,6 +1,7 @@
 /* Menținerea specificatorului de acces “public” este o potențială breșă de securitate. Pentru a asigura ascunderea datelor, cele 3 date membre ale clasei Cutie vor avea specificatorul de acces “private”.
-Pentru clasa Cutie se vor scrie o serie de funcții care modifică (setter), respectiv accesează (getter) valorile datelor membre. În programul principal se va instanția un obiect de tipul Cutie, se vor citi de la tastatură cele 
-3 atribute și se vor asigna obiectului respectiv cu ajutorul funcțiilor setter. Ulterior, se vor afișa pe ecran cu ajutorul funcțiilor getter în ordinea precizată, fiecare pe un rând nou. */
+Pentru clasa Cutie se vor scrie o serie de funcții care modifică (setter), respectiv accesează (getter) valorile datelor membre. În programul principal se va instanția un obiect de tipul Cutie, se vor citi de la tastatură 
+cele 3 atribute și se vor asigna obiectului respectiv cu ajutorul funcțiilor setter. Ulterior, se vor afișa pe ecran cu ajutorul funcțiilor getter în ordinea precizată, fiecare pe un rând nou. */
+
 
 #include <iostream>
 #include <string>

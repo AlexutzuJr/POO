@@ -10,6 +10,7 @@ făcute cu ajutorul listei de inițializare.
 Se va afișa pe ecran noul nume al Copilului, sau “EROARE” în cazul în care persoana desemnată să modifice numele nu are permisiunea să facă acest lucru, conform regulii enunțate mai sus.
 Extensie: separați declarațiile claselor și definițiile funcțiilor membre în fișiere diferite. Notă: trebuie avute în vedere declarația în avans a clasei care este accesată de o altă clasă. */
 
+
 #include <iostream>
 #include <limits>
 #include <string>

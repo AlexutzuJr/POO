@@ -1,3 +1,26 @@
+/* Să se implementeze următoarea secvență UML:
+
+Vehicul: 
+-nume: std::string
+-pret: float
+-greutate: float
++afisare(void): void
+Autovehicul (public to Vehicul):
+-putere: int
++afisare(void): void
+
+Se vor instanția un obiect din clasa Vehicul și un obiect din clasa Autovehicul cu datele citite de la tastatură. Se citesc de la tastatură, de pe rânduri diferite, următoarele:
+1. un șir de caractere, reprezentând numele Vehiculului;
+2. un număr real, reprezentând prețul Vehiculului;
+3. un număr real, reprezentând greutatea Vehiculului;
+4. un șir de caractere, reprezentând numele Autovehiculului;
+5. un număr real, reprezentând prețul Autovehiculului;
+6. un număr real, reprezentând greutatea Autovehiculului;
+7. un număr întreg, reprezentând puterea Autovehiculului.
+
+Se vor afișa pe ecran datele membre ale celor două obiecte, începând cu vehiculul, fiecare pe un rând nou, sub forma: <nume data membra>: <valoare data membra>. Constructorii vor folosi liste de inițializare, iar funcția
+de afișare din clasa Autovehicul va utiliza funcția de afișare din clasa Vehicul. */
+
 #include <iostream>
 #include <string>
 #include <limits>

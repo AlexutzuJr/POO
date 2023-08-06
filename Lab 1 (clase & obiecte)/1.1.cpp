@@ -1,3 +1,6 @@
+/* Scrieți o clasă Cutie cu 3 date membre publice: lungime, lățime, înălțime, de tip real. 
+În programul principal se va instanția un obiect de tipul Cutie, se vor citi de la tastatură cele 3 atribute și se vor afișa pe ecran în ordinea precizată, fiecare pe un rând nou. */
+
 #include <iostream>
 #include <string>
 

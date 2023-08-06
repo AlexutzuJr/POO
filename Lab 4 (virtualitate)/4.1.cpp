@@ -3,10 +3,10 @@
 Entity:
 # name: std::string
 
-Person (public to Entity):
+Person (public către Entity):
 # age: int
 
-Student (public to Person):
+Student (public către Person):
 - serie: char
 
 Clasele se vor completa cu funcționalitățile necesare astfel încât codul dat în funcția main să întoarcă următoarea secvență de mesaje:
@@ -20,6 +20,7 @@ Ctor Student
 Entity name: Entity 1
 Entity name: Person 1
 Entity name: Student 1 */
+
 
 #include <iostream>
 #include <string>

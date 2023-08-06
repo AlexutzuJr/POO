@@ -19,8 +19,8 @@ Se vor instanția un obiect din clasa Vehicul și un obiect din clasa Autovehicu
 6. un număr real, reprezentând greutatea Autovehiculului;
 7. un număr întreg, reprezentând puterea Autovehiculului.
 
-Se vor afișa pe ecran datele membre ale celor două obiecte, începând cu vehiculul, fiecare pe un rând nou, sub forma: <nume data membra>: <valoare data membra>. Constructorii vor folosi liste de inițializare, iar funcția de afișare din clasa Autovehicul va utiliza 
-funcția de afișare din clasa Vehicul. */
+Se vor afișa pe ecran datele membre ale celor două obiecte, începând cu vehiculul, fiecare pe un rând nou, sub forma: <nume data membra>: <valoare data membra>. Constructorii vor folosi liste de inițializare, iar funcția 
+de afișare din clasa Autovehicul va utiliza funcția de afișare din clasa Vehicul. */
 
 
 #include <iostream>

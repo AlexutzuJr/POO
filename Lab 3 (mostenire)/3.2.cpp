@@ -22,8 +22,9 @@ Separat, se vor mai citi următoarele date, de pe linii diferite, pentru a utili
 5. un șir de caractere, reprezentând numărul apelat;
 6. un număr întreg, reprezentând durata apelului, exprimată în minute.
 
-Funcția suna din clasa Telefon primește ca argument un șir de caractere și afișează mesajul "Calling: <numar de telefon transmis ca argument>". Funcția suna din clasa Telefon_mobil primește un argument în plus reprezentând durata apelului în minute și afișează mesajul
-"Outgoing number: <numar de telefon propriu>", urmat de mesajul funcției cu același nume din clasa Telefon, și reduce bateria direct proporțional cu puterea consumată de dispozitivul electronic. Bateria scade cu <putere>/100 pentru fiecare minut de conversație.
+Funcția suna din clasa Telefon primește ca argument un șir de caractere și afișează mesajul "Calling: <numar de telefon transmis ca argument>". Funcția suna din clasa Telefon_mobil primește un argument în plus 
+reprezentând durata apelului în minute și afișează mesajul "Outgoing number: <numar de telefon propriu>", urmat de mesajul funcției cu același nume din clasa Telefon, și reduce bateria direct proporțional cu puterea 
+consumată de dispozitivul electronic. Bateria scade cu <putere>/100 pentru fiecare minut de conversație.
 
 În programul principal se apelează funcția suna cu argumentele citite de la tastatură și se afișează pe ecran, pe un rând separat, procentul de baterie rămas disponibil, după efectuarea apelului. */
 

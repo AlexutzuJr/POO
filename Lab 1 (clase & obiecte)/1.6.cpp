@@ -1,7 +1,10 @@
-/* Pentru clasa Punctaj se va defini un destructor, un constructor de copiere și o funcție membră care modifică nota de la un index dat. Se va instanția un obiect de tip Punctaj folosind constructorul cu 2 parametri, se va 
-crea o nouă instanță prin copierea acestuia, se va modifica nota de la un anumit index cu o nouă valoare citită de la tastatură, după care se vor afișa pe ecran notele celui de-al doilea obiect.
+/* Pentru clasa Punctaj se va defini un destructor, un constructor de copiere și o funcție membră care modifică nota de la un index dat. Se va instanția un obiect de tip Punctaj folosind constructorul cu 2 parametri, se 
+va crea o nouă instanță prin copierea acestuia, se va modifica nota de la un anumit index cu o nouă valoare citită de la tastatură, după care se vor afișa pe ecran notele celui de-al doilea obiect.
+
 Se va apela în mod explicit destructorul primului obiect, după care se vor afișa din nou pe ecran notele celui de-al doilea obiect.
+
 Comentați constructorul de copiere și repetați pașii de mai sus. */
+
 
 #include <iostream>
 

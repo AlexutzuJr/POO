@@ -1,11 +1,12 @@
 /* Să se scrie două clase distincte, Părinte și Copil. Clasa Copil va conține datele membre vârstă și nume și va declara (toată) clasa Părinte drept prietenă. Clasa Părinte va conține o funcție membră care îi permite să 
-modifice numele Copilului doar dacă acesta din urmă are vârsta <18 ani, iar Copilul conține o funcție membră care îi permite să își modifice numele doar dacă are >=18 ani. Toate inițializările din constructori vor fi făcute 
-cu ajutorul listei de inițializare.
+modifice numele Copilului doar dacă acesta din urmă are vârsta <18 ani, iar Copilul conține o funcție membră care îi permite să își modifice numele doar dacă are >=18 ani. Toate inițializările din constructori vor fi 
+făcute cu ajutorul listei de inițializare.
 În programul principal se vor citi de la tastatură, de pe linii diferite, următoarele date:
--un întreg m, reprezentând vârsta Copilului;
--un șir de caractere s, reprezentând numele Copilului (șirul de caractere poate fi format din mai mult de un cuvânt);
--un șir de caractere new_s, reprezentând noul nume al Copilului (șirul de caractere poate fi format din mai mult de un cuvânt);
--un întreg x, reprezentând persoana care va solicita schimbarea: 0 - Părintele; 1 - Copilul.
+1. un întreg m, reprezentând vârsta Copilului;
+2. un șir de caractere s, reprezentând numele Copilului (șirul de caractere poate fi format din mai mult de un cuvânt);
+3. un șir de caractere new_s, reprezentând noul nume al Copilului (șirul de caractere poate fi format din mai mult de un cuvânt);
+4. un întreg x, reprezentând persoana care va solicita schimbarea: 0 - Părintele; 1 - Copilul.
+
 Se va afișa pe ecran noul nume al Copilului, sau “EROARE” în cazul în care persoana desemnată să modifice numele nu are permisiunea să facă acest lucru, conform regulii enunțate mai sus.
 Extensie: separați declarațiile claselor și definițiile funcțiilor membre în fișiere diferite. Notă: trebuie avute în vedere declarația în avans a clasei care este accesată de o altă clasă. */
 

@@ -1,9 +1,11 @@
 /* Să se scrie un program care afișează pe ecran numele studentului cu cea mai mare medie a notelor.
+
 Se citesc de la tastatură:
 - un întreg, reprezentând numărul de studenți ce urmează a fi inițializați; pentru fiecare student se citesc:
-- un std::string, reprezentând numele studentului;
-- un întreg, n, reprezentând numărul de note ce urmează a fi citit de la tastatură;
-- n întregi reprezentând notele studentului; */
+   - un std::string, reprezentând numele studentului;
+   - un întreg, n, reprezentând numărul de note ce urmează a fi citit de la tastatură;
+   - n întregi reprezentând notele studentului; */
+
 
 #include <iostream>
 #include <string>

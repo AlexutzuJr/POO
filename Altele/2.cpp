@@ -1,11 +1,10 @@
 /* Să presupunem că un triplet (a, b, c) este un zigzag dacă, fie a < b > c, fie a > b < c.
 
-Având în vedere o serie de numere întregi, sarcina ta este să verifici toate triplele elementelor sale consecutive pentru a fi în zig-zag. Mai formal, sarcina dvs. este să construiți o matrice de numere de lungime
+Având în vedere o serie de numere întregi, sarcina ta este să verifici toate tripletele elementelor sale consecutive pentru a fi în zig-zag. Mai formal, sarcina dvs. este să construiți o matrice de numere de lungime
 numere.lungime - 2, unde elementul "i" al matricei de ieșire este egal cu 1 dacă tripletul (numere[i], numere[i + 1], numere[i + 2]) este un zigzag, iar 0 în caz contrar.
 
 
 Exemplu:
-
 Pentru numere = [1, 2, 1, 3, 4], rezultatul ar trebui să fie soluție(numere) = [1, 1, 0].
 
 (numere[0], numere[1], numere[2]) = (1, 2, 1) este un zigzag, deoarece 1 < 2 > 1;

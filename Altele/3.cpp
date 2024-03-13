@@ -10,7 +10,6 @@ Notă: Nu se așteaptă să oferiți cea mai optimă soluție, dar o soluție cu
 
 
 Exemplu:
-
 Pentru initialHealth = 12 și deltas = [-4, -12, 6, 2], rezultatul ar trebui să fie solution(initialHealth, deltas) = 8.
 
 Să luăm în considerare fiecare nivel:

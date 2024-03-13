@@ -5,7 +5,7 @@ Pentru n=29, rezultatul ar trebui să fie: soluție(n)=11.
 
 
 Intrare/ieșire:
--timp limita de executie 4 secunde (cpp)
+-timp limită de execuție 4 secunde (cpp)
 
 -intreg n:
 Un întreg pozitiv de două cifre.

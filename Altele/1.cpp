@@ -1,5 +1,6 @@
 /* Se dă un număr întreg de două cifre n. Să se returneze suma cifrelor sale.
 
+
 Exemplu:
 Pentru n=29, rezultatul ar trebui să fie: soluție(n)=11.
 

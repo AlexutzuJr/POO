@@ -80,6 +80,7 @@ int main()
 
     std::vector<int> numbers3 = {1000000000, 1000000000, 1000000000};
     std::vector<int> result3 = solution(numbers3);
+    
     for (int i = 0; i < result3.size(); i++) 
     {
         std::cout << result3[i] << " ";

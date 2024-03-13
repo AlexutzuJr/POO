@@ -1,5 +1,5 @@
 /* Imaginați-vă o masă de dimensiunea numRows × numColumns cu niște lasere plasate pe ea. Aceste lasere sunt plasate la coordonatele specificate în matricea bidimensională "laserCoordinates", unde "laserCoordinates[i]" 
-este o matrice cu două elemente care conține coordonatele pentru centrul al celui de-al "i-lea" laser. Laserele cu un centru într-o celulă (rând, coloană) distrug totul în același rând (adică rânduri cu rând index) și 
+este o matrice cu două elemente care conține coordonatele pentru centrul al celui de-al "i"-lea laser. Laserele cu un centru într-o celulă (rând, coloană) distrug totul în același rând (adică rânduri cu rând index) și 
 aceeași coloană (adică coloane cu coloană index).
 
 Acum imaginați-vă că există un robot la coordonate (curRow, curColumn). Robotul se poate mișca doar în linie dreaptă, fie la stânga, la dreapta, în sus sau în jos în cadrul acestei mese. Sarcina ta este să numeri 
@@ -23,12 +23,12 @@ Intrare/ieșire:
 - [limită de memorie] 1 GB
 
 - [intrare] număr întreg numRows:
-Un număr întreg care reprezintă numărul de rânduri dintr-un tablou.
+Un număr întreg care reprezintă numărul de rânduri dintr-o matrice.
 Constrângeri garantate:
 8 ≤ numRows ≤ 20.
 
 - [intrare] număr întreg numColumns:
-Un număr întreg care reprezintă numărul de coloane dintr-un panou.
+Un număr întreg care reprezintă numărul de coloane dintr-o matrice.
 Constrângeri garantate:
 8 ≤ numColumns ≤ 20.
 
@@ -71,6 +71,7 @@ bool isHitByLaser(int row, int col, const vector<vector<int>>& laserCoordinates)
     {
         int laserRow = laser[0];
         int laserCol = laser[1];
+        
         if (row == laserRow || col == laserCol) 
         {
             return true;

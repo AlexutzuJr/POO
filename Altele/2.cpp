@@ -20,16 +20,17 @@ Deoarece toate elementele numerelor sunt aceleași, nu există zigzaguri.
 
 
 Intrare/ieșire:
-[limită de timp de execuție] 4 secunde (cpp)
-[limită de memorie] 1 GB
-[intrare] matrice.intreg numere:
-O matrice de numere întregi.
+- [limită de timp de execuție] 4 secunde (cpp)
 
+- [limită de memorie] 1 GB
+
+- [intrare] matrice.intreg numere:
+O matrice de numere întregi.
 Constrângeri garantate:
 3 ≤ numere.lungime ≤ 100,
 1 ≤ numere[i] ≤ 10^9.
 
-[ieșire] matrice.intreg:
+- [ieșire] matrice.intreg:
 Returnează o matrice, în care elementul "i" este egal cu 1 dacă tripletul (numere[i], numere[i + 1], numere[i + 2]) este un zigzag, iar 0 în caz contrar. */
 
 #include <iostream>

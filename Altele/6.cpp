@@ -39,7 +39,7 @@ Constrângeri garantate:
 1 ≤ dif ≤ 10^9.
 
 - [ieșire] array.integer:
-După procesarea fiecărei interogări, numărați numărul de triple (x, y, z) în numere care îndeplinesc această condiție: x - y = y - z = dif. Este garantat că numărul se va potrivi întotdeauna într-un tip întreg semnat pe 
+După procesarea fiecărei interogări, numărați numărul de triplete (x, y, z) în numere care îndeplinesc această condiție: x - y = y - z = dif. Este garantat că numărul se va potrivi întotdeauna într-un tip întreg semnat pe 
 32 de biți. Returnează o serie de astfel de valori pentru toate interogările. */
 
 #include <vector>
@@ -68,6 +68,7 @@ vector<int> solution(vector<string> queries, int diff)
     };
 
     vector<int> result;
+    
     for (const string& query : queries) 
     {
         char op = query[0];

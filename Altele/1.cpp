@@ -9,7 +9,8 @@ Intrare/ieșire:
 
 -intreg n:
 Un întreg pozitiv de două cifre.
-Constrângeri garantate: 10<=n<=99
+Constrângeri garantate: 
+10<=n<=99
 
 -număr întreg de ieșire:
 Suma primei și a doua cifre ale numărului introdus. */

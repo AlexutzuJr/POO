@@ -1,6 +1,6 @@
 /* Pentru o gamă dată de recenzii șiruri de caractere care reprezintă recenzii despre produse, determinați sentimentul fiecărei recenzii - indiferent dacă este pozitiv, negativ sau neutru. Pentru a procesa sentimentul 
 recenziilor, vi se oferă trei matrice de șiruri: "cuvintePozitive" care conțin toate cuvintele care sunt considerate pozitive, "cuvinteNegative" care conțin toate cuvintele care sunt considerate negative și intensificatoare 
-care conțin cuvinte care măresc impactul următorului cuvânt întâlnit din cuvintePozitive sau cuvinteNegative câte unul. Specific:
+care conțin cuvinte care măresc impactul următorului cuvânt întâlnit din "cuvintePozitive" sau "cuvinteNegative" câte unul. Specific:
 O recenzie este considerată pozitivă dacă conține mai multe cuvinte pozitive decât cuvinte negative.
 O recenzie este considerată negativă dacă conține mai multe cuvinte negative decât cuvinte pozitive.
 O recenzie este considerată neutră dacă are un număr egal de cuvinte pozitive și negative.
@@ -10,14 +10,13 @@ cuvintele pozitive, cuvintele negative și intensificatoarele vor conține cuvin
 
 Returnează o matrice de șiruri de caractere, unde șirul "i" este „pozitiv”, „negativ” sau „neutru”, în funcție de sentimentul revizuirii "i", așa cum este definit mai sus.
 
-Notă: Nu se așteaptă să oferiți cea mai optimă soluție, dar se va potrivi o soluție cu o complexitate în timp nu mai rea decât O(reviews.length × (positiveWords.length + negativeWords.length + intensifiers.length) × 
-x longestWord.length^2) in termenul de executie.
+Notă: Nu se așteaptă să oferiți cea mai optimă soluție, dar se va potrivi o soluție cu o complexitate în timp nu mai slabă decât O(reviews.length × (positiveWords.length + negativeWords.length + intensifiers.length) × 
+x longestWord.length^2) în termenul de executie.
 
 
 Exemplu:
-
-Pentru recenzii = [„foarte violet și bun”, „foarte foarte rău unul dintre cele mai rele”, „bun, dar mai rău decât analogul”, „”], pozitivWords = [„bun”, „cel mai bun”], negativWords = [”rău ", "mai rău", "cel mai rău"] și 
-intensificatori = ["foarte"], rezultatul ar trebui să fie soluție(recenzii, cuvinte pozitive, cuvinte negative, intensificatoare) = ["pozitiv", "negativ", "neutru", "neutru"].
+Pentru recenzii = [„foarte violet și bun”, „foarte foarte rău unul dintre cele mai rele”, „bun, dar mai rău decât analogul”, „”], positiveWords = [„bun”, „cel mai bun”], negativeWords = [”rău ", "mai rău", "cel mai rău"] 
+și intensificatori = ["foarte"], rezultatul ar trebui să fie soluție(recenzii, cuvinte pozitive, cuvinte negative, intensificatoare) = ["pozitiv", "negativ", "neutru", "neutru"].
 
 Explicaţie:
 Prima recenzie constă din cuvintele „foarte” și „bine”. Cuvântul „foarte” intensifică următorul cuvânt bun sau rău. Cuvintele „violet” și „și” nu sunt în niciuna dintre listele de cuvinte, așa că sunt ignorate. Următorul 
@@ -30,31 +29,31 @@ A treia recenzie are 1 cuvânt negativ și 1 cuvânt pozitiv, deci această rece
 Ultima recenzie nu are deloc cuvinte, ceea ce este considerat a fi „neutru”.
 
 
-Intrare ieșire:
+Intrare/ieșire:
 - [limită de timp de execuție] 0,5 secunde (cpp)
 
 - [limită de memorie] 1 GB
 
 - [intrare] recenzii array.string:
-O serie de recenzii. Este garantat că fiecare recenzie constă numai din litere și spații engleze mici.
+O serie de recenzii. Este garantat că fiecare recenzie constă numai din litere mici și spații.
 Constrângeri garantate:
 1 ≤ recenzii.lungime ≤ 100,
 0 ≤ recenzii[i].lungime ≤ 500.
 
-- [intrare] array.string pozitiveWords:
-O serie de cuvinte pozitive. Este garantat că fiecare cuvânt constă numai din litere mici engleze.
+- [intrare] array.string positiveWords:
+O serie de cuvinte pozitive. Este garantat că fiecare cuvânt constă numai din litere mici.
 Constrângeri garantate:
-1 ≤ Cuvinte pozitive.lungime ≤ 100,
-1 ≤ Cuvinte pozitive[i].lungime ≤ 10.
+1 ≤ cuvinte pozitive.lungime ≤ 100,
+1 ≤ cuvinte pozitive[i].lungime ≤ 10.
 
 - [intrare] array.string negativeWords:
-O serie de cuvinte negative. Este garantat că fiecare cuvânt constă numai din litere mici engleze.
+O serie de cuvinte negative. Este garantat că fiecare cuvânt constă numai din litere mici.
 Constrângeri garantate:
 1 ≤ cuvinte negative.lungime ≤ 100,
-1 ≤ Cuvinte negative[i].lungime ≤ 10.
+1 ≤ cuvinte negative[i].lungime ≤ 10.
 
 - [intrare] intensificatoare array.string:
-O serie de cuvinte intensificatoare. Este garantat că fiecare cuvânt constă numai din litere mici engleze.
+O serie de cuvinte intensificatoare. Este garantat că fiecare cuvânt constă numai din litere mici.
 Constrângeri garantate:
 0 ≤ intensificatoare.lungime ≤ 100,
 1 ≤ intensificatoare[i].lungime ≤ 10.
